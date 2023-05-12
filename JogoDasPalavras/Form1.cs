@@ -33,9 +33,9 @@ namespace JogoDasPalavras
                 return;
             }
             Label letra = (Label)panPalavras.Controls[24 - (palavraCount + letraCount)];
+            letra.Text = botao.Text;
             letraCount = letraCount < 5 ? ++letraCount : 5;
             botoesDigitados[letraCount - 1] = botao;
-            letra.Text = botao.Text;
         }
 
         public void EnviarPalpite()
@@ -44,24 +44,21 @@ namespace JogoDasPalavras
             {
                 return;
             }
+            string palavra = VerificarPalpite();
+            MostrarFeedback(palavra);
+            AtualizarPalavra();
+            VerificarResultado();
+        }
+
+        public string VerificarPalpite()
+        {
             string palpite = "";
             for (int i = 0; i < 5; i++)
             {
                 Label letra = (Label)panPalavras.Controls[24 - (palavraCount + i)];
                 palpite += letra.Text;
             }
-            string palavra = jogoPalavras.VerificacaoPalavra(palpite);
-            MostrarFeedback(palavra);
-            palavraCount += 5;
-            letraCount = 0;
-            botoesDigitados = new Button[5];
-            string resultado = jogoPalavras.ObterResultado();
-            if (resultado != "")
-            {
-                panBotoes.Enabled = false;
-                lblResultado.Text = resultado;
-                MessageBox.Show(resultado);
-            }
+            return jogoPalavras.VerificacaoPalavra(palpite);
         }
 
         public void MostrarFeedback(string palavra)
@@ -88,12 +85,30 @@ namespace JogoDasPalavras
             }
         }
 
-        public void Resetar()
+        public void VerificarResultado()
         {
+            string resultado = jogoPalavras.ObterResultado();
+            if (resultado != "")
+            {
+                panBotoes.Enabled = false;
+                lblResultado.Text = resultado;
+                MessageBox.Show(resultado);
+            }
+        }
+
+        private void AtualizarPalavra()
+        {
+            palavraCount += 5;
+            letraCount = 0;
+            botoesDigitados = new Button[5];
+        }
+
+        private void Resetar()
+        {
+            this.jogoPalavras.IniciarValores();
             this.botoesDigitados = new Button[5];
             panBotoes.Enabled = true;
             lblResultado.Text = "Digite uma letra";
-            jogoPalavras.IniciarValores();
             foreach (Button botao in panBotoes.Controls)
             {
                 botao.Enabled = true;
@@ -108,7 +123,7 @@ namespace JogoDasPalavras
             this.letraCount = 0;
         }
 
-        public void ResetarEvento(object? sender, EventArgs e)
+        private void ResetarEvento(object? sender, EventArgs e)
         {
             Resetar();
         }
