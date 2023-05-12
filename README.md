@@ -1,6 +1,6 @@
 # Jogo de Palavras
 
-Jogo de palavras é uma aplicação Windows Forms construída durante a **9ª edição**, da [Academia do Programador](https://www.academiadoprogramador.net "Site da Academia do Programador").
+Jogo de Palavras é uma aplicação Windows Forms construída durante a **9ª edição**, da [Academia do Programador](https://www.academiadoprogramador.net "Site da Academia do Programador").
 
 A aplicação consiste em um jogo de palavras baseado em adivinhação, onde os jogadores tentam adivinhar uma palavra oculta em um número limitado de tentativas. O jogo é jogado por turnos, onde o
 jogador tenta adivinhar a palavra secreta e recebendo feedback sobre as letras corretas e em suas posições corretas.
