@@ -28,7 +28,7 @@
             }
             if (tentativas == 0)
             {
-                return "Você perdeu! A palavra era " + new string(this.palavraSecreta);
+                return "Você perdeu! A palavra era " + new string(this.palavraSecreta).ToUpper();
             }
             return "";
         }
