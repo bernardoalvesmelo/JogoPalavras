@@ -107,9 +107,16 @@ namespace JogoDasPalavras
         {
             this.jogoPalavras.IniciarValores();
             this.botoesDigitados = new Button[5];
-            panBotoes.Enabled = true;
-            lblResultado.Text = "Digite uma letra";
-            foreach (Button botao in panBotoes.Controls)
+            this.panBotoes.Enabled = true;
+            this.lblResultado.Text = "Digite uma letra";
+            this.palavraCount = 0;
+            this.letraCount = 0;
+            ResetarPanels();
+        }
+
+        private void ResetarPanels()
+        {
+            foreach (Button botao in this.panBotoes.Controls)
             {
                 botao.Enabled = true;
                 botao.BackColor = this.btnEnter.BackColor;
@@ -119,8 +126,6 @@ namespace JogoDasPalavras
                 letra.Text = "";
                 letra.BackColor = this.BackColor;
             }
-            this.palavraCount = 0;
-            this.letraCount = 0;
         }
 
         private void ResetarEvento(object? sender, EventArgs e)
