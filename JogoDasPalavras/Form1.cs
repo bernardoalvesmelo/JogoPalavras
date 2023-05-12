@@ -32,9 +32,9 @@ namespace JogoDasPalavras
                 EnviarPalpite();
                 return;
             }
-            Label letra = (Label)panPalavras.Controls[24 - (palavraCount + letraCount)];
-            letra.Text = botao.Text;
             letraCount = letraCount < 5 ? ++letraCount : 5;
+            Label letra = (Label)panPalavras.Controls[25 - (palavraCount + letraCount)];
+            letra.Text = botao.Text;
             botoesDigitados[letraCount - 1] = botao;
         }
 

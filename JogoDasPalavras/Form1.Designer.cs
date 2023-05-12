@@ -82,9 +82,9 @@
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
+            btnResetar = new Button();
             statusStrip1 = new StatusStrip();
             lblResultado = new ToolStripStatusLabel();
-            btnResetar = new Button();
             panPalavras.SuspendLayout();
             panBotoes.SuspendLayout();
             statusStrip1.SuspendLayout();
@@ -92,6 +92,7 @@
             // 
             // panPalavras
             // 
+            panPalavras.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panPalavras.ColumnCount = 5;
             panPalavras.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
             panPalavras.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
@@ -461,6 +462,7 @@
             // 
             // panBotoes
             // 
+            panBotoes.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panBotoes.Controls.Add(button28);
             panBotoes.Controls.Add(button29);
             panBotoes.Controls.Add(button24);
@@ -488,15 +490,15 @@
             panBotoes.Controls.Add(button3);
             panBotoes.Controls.Add(button2);
             panBotoes.Controls.Add(button1);
-            panBotoes.Location = new Point(12, 293);
+            panBotoes.Location = new Point(12, 313);
             panBotoes.Name = "panBotoes";
-            panBotoes.Size = new Size(716, 145);
+            panBotoes.Size = new Size(716, 125);
             panBotoes.TabIndex = 1;
             // 
             // button28
             // 
             button28.BackColor = SystemColors.ButtonHighlight;
-            button28.Location = new Point(534, 15);
+            button28.Location = new Point(545, 3);
             button28.Name = "button28";
             button28.Size = new Size(37, 32);
             button28.TabIndex = 27;
@@ -506,7 +508,7 @@
             // button29
             // 
             button29.BackColor = SystemColors.ButtonHighlight;
-            button29.Location = new Point(491, 15);
+            button29.Location = new Point(502, 3);
             button29.Name = "button29";
             button29.Size = new Size(37, 32);
             button29.TabIndex = 26;
@@ -516,7 +518,7 @@
             // button24
             // 
             button24.BackColor = SystemColors.ButtonHighlight;
-            button24.Location = new Point(449, 15);
+            button24.Location = new Point(460, 3);
             button24.Name = "button24";
             button24.Size = new Size(37, 32);
             button24.TabIndex = 25;
@@ -526,7 +528,7 @@
             // button25
             // 
             button25.BackColor = SystemColors.ButtonHighlight;
-            button25.Location = new Point(406, 15);
+            button25.Location = new Point(417, 3);
             button25.Name = "button25";
             button25.Size = new Size(37, 32);
             button25.TabIndex = 24;
@@ -536,7 +538,7 @@
             // button26
             // 
             button26.BackColor = SystemColors.ButtonHighlight;
-            button26.Location = new Point(363, 15);
+            button26.Location = new Point(374, 3);
             button26.Name = "button26";
             button26.Size = new Size(37, 32);
             button26.TabIndex = 23;
@@ -546,7 +548,7 @@
             // button21
             // 
             button21.BackColor = SystemColors.ButtonHighlight;
-            button21.Location = new Point(316, 15);
+            button21.Location = new Point(327, 3);
             button21.Name = "button21";
             button21.Size = new Size(37, 32);
             button21.TabIndex = 22;
@@ -556,7 +558,7 @@
             // button22
             // 
             button22.BackColor = SystemColors.ButtonHighlight;
-            button22.Location = new Point(273, 15);
+            button22.Location = new Point(284, 3);
             button22.Name = "button22";
             button22.Size = new Size(37, 32);
             button22.TabIndex = 21;
@@ -566,7 +568,7 @@
             // button23
             // 
             button23.BackColor = SystemColors.ButtonHighlight;
-            button23.Location = new Point(230, 15);
+            button23.Location = new Point(241, 3);
             button23.Name = "button23";
             button23.Size = new Size(37, 32);
             button23.TabIndex = 20;
@@ -576,7 +578,7 @@
             // btnEnter
             // 
             btnEnter.BackColor = SystemColors.ButtonHighlight;
-            btnEnter.Location = new Point(468, 91);
+            btnEnter.Location = new Point(479, 79);
             btnEnter.Name = "btnEnter";
             btnEnter.Size = new Size(80, 32);
             btnEnter.TabIndex = 18;
@@ -586,7 +588,7 @@
             // button20
             // 
             button20.BackColor = SystemColors.ButtonHighlight;
-            button20.Location = new Point(425, 91);
+            button20.Location = new Point(436, 79);
             button20.Name = "button20";
             button20.Size = new Size(37, 32);
             button20.TabIndex = 17;
@@ -596,7 +598,7 @@
             // button15
             // 
             button15.BackColor = SystemColors.ButtonHighlight;
-            button15.Location = new Point(382, 91);
+            button15.Location = new Point(393, 79);
             button15.Name = "button15";
             button15.Size = new Size(37, 32);
             button15.TabIndex = 16;
@@ -606,7 +608,7 @@
             // button16
             // 
             button16.BackColor = SystemColors.ButtonHighlight;
-            button16.Location = new Point(339, 91);
+            button16.Location = new Point(350, 79);
             button16.Name = "button16";
             button16.Size = new Size(37, 32);
             button16.TabIndex = 15;
@@ -616,7 +618,7 @@
             // button17
             // 
             button17.BackColor = SystemColors.ButtonHighlight;
-            button17.Location = new Point(296, 91);
+            button17.Location = new Point(307, 79);
             button17.Name = "button17";
             button17.Size = new Size(37, 32);
             button17.TabIndex = 14;
@@ -626,7 +628,7 @@
             // button12
             // 
             button12.BackColor = SystemColors.ButtonHighlight;
-            button12.Location = new Point(511, 53);
+            button12.Location = new Point(522, 41);
             button12.Name = "button12";
             button12.Size = new Size(37, 32);
             button12.TabIndex = 13;
@@ -636,7 +638,7 @@
             // button13
             // 
             button13.BackColor = SystemColors.ButtonHighlight;
-            button13.Location = new Point(468, 53);
+            button13.Location = new Point(479, 41);
             button13.Name = "button13";
             button13.Size = new Size(37, 32);
             button13.TabIndex = 12;
@@ -646,7 +648,7 @@
             // button14
             // 
             button14.BackColor = SystemColors.ButtonHighlight;
-            button14.Location = new Point(425, 53);
+            button14.Location = new Point(436, 41);
             button14.Name = "button14";
             button14.Size = new Size(37, 32);
             button14.TabIndex = 11;
@@ -656,7 +658,7 @@
             // button9
             // 
             button9.BackColor = SystemColors.ButtonHighlight;
-            button9.Location = new Point(382, 53);
+            button9.Location = new Point(393, 41);
             button9.Name = "button9";
             button9.Size = new Size(37, 32);
             button9.TabIndex = 10;
@@ -666,7 +668,7 @@
             // button10
             // 
             button10.BackColor = SystemColors.ButtonHighlight;
-            button10.Location = new Point(339, 53);
+            button10.Location = new Point(350, 41);
             button10.Name = "button10";
             button10.Size = new Size(37, 32);
             button10.TabIndex = 9;
@@ -676,7 +678,7 @@
             // button11
             // 
             button11.BackColor = SystemColors.ButtonHighlight;
-            button11.Location = new Point(296, 53);
+            button11.Location = new Point(307, 41);
             button11.Name = "button11";
             button11.Size = new Size(37, 32);
             button11.TabIndex = 8;
@@ -686,7 +688,7 @@
             // button8
             // 
             button8.BackColor = SystemColors.ButtonHighlight;
-            button8.Location = new Point(249, 91);
+            button8.Location = new Point(260, 79);
             button8.Name = "button8";
             button8.Size = new Size(37, 32);
             button8.TabIndex = 7;
@@ -696,7 +698,7 @@
             // button7
             // 
             button7.BackColor = SystemColors.ButtonHighlight;
-            button7.Location = new Point(249, 53);
+            button7.Location = new Point(260, 41);
             button7.Name = "button7";
             button7.Size = new Size(37, 32);
             button7.TabIndex = 6;
@@ -706,7 +708,7 @@
             // button6
             // 
             button6.BackColor = SystemColors.ButtonHighlight;
-            button6.Location = new Point(206, 91);
+            button6.Location = new Point(217, 79);
             button6.Name = "button6";
             button6.Size = new Size(37, 32);
             button6.TabIndex = 5;
@@ -716,7 +718,7 @@
             // button5
             // 
             button5.BackColor = SystemColors.ButtonHighlight;
-            button5.Location = new Point(206, 53);
+            button5.Location = new Point(217, 41);
             button5.Name = "button5";
             button5.Size = new Size(37, 32);
             button5.TabIndex = 4;
@@ -726,7 +728,7 @@
             // button4
             // 
             button4.BackColor = SystemColors.ButtonHighlight;
-            button4.Location = new Point(163, 91);
+            button4.Location = new Point(174, 79);
             button4.Name = "button4";
             button4.Size = new Size(37, 32);
             button4.TabIndex = 3;
@@ -736,7 +738,7 @@
             // button3
             // 
             button3.BackColor = SystemColors.ButtonHighlight;
-            button3.Location = new Point(163, 53);
+            button3.Location = new Point(174, 41);
             button3.Name = "button3";
             button3.Size = new Size(37, 32);
             button3.TabIndex = 2;
@@ -746,7 +748,7 @@
             // button2
             // 
             button2.BackColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(185, 15);
+            button2.Location = new Point(196, 3);
             button2.Name = "button2";
             button2.Size = new Size(37, 32);
             button2.TabIndex = 1;
@@ -756,12 +758,22 @@
             // button1
             // 
             button1.BackColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(142, 15);
+            button1.Location = new Point(153, 3);
             button1.Name = "button1";
             button1.Size = new Size(37, 32);
             button1.TabIndex = 0;
             button1.Text = "Q";
             button1.UseVisualStyleBackColor = false;
+            // 
+            // btnResetar
+            // 
+            btnResetar.BackColor = SystemColors.ActiveCaption;
+            btnResetar.Location = new Point(308, 264);
+            btnResetar.Name = "btnResetar";
+            btnResetar.Size = new Size(122, 43);
+            btnResetar.TabIndex = 3;
+            btnResetar.Text = "Resetar";
+            btnResetar.UseVisualStyleBackColor = false;
             // 
             // statusStrip1
             // 
@@ -777,16 +789,6 @@
             lblResultado.Name = "lblResultado";
             lblResultado.Size = new Size(88, 17);
             lblResultado.Text = "Digite a palavra";
-            // 
-            // btnResetar
-            // 
-            btnResetar.BackColor = SystemColors.ActiveCaption;
-            btnResetar.Location = new Point(328, 254);
-            btnResetar.Name = "btnResetar";
-            btnResetar.Size = new Size(75, 23);
-            btnResetar.TabIndex = 3;
-            btnResetar.Text = "Resetar";
-            btnResetar.UseVisualStyleBackColor = false;
             // 
             // TelaJogoPalavrasForm
             // 
