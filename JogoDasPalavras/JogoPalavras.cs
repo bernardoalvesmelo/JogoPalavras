@@ -22,7 +22,7 @@
 
         public string ObterResultado()
         {
-            if (new string(letrasDescobertas) == "!!!!!")
+            if (new string(letrasDescobertas) == "TTTTT")
             {
                 return "Você venceu!";
             }
@@ -40,15 +40,15 @@
             {
                 if (palavra[i] == palavraSecreta[i])
                 {
-                    letrasDescobertas[i] = '!';
+                    letrasDescobertas[i] = 'T';
                 }
                 else if (palavraSecreta.Contains(palavra[i]))
                 {
-                    letrasDescobertas[i] = '@';
+                    letrasDescobertas[i] = 'C';
                 }
                 else
                 {
-                    letrasDescobertas[i] = palavra[i];
+                    letrasDescobertas[i] = 'F';
                 }
             }
             tentativas--;

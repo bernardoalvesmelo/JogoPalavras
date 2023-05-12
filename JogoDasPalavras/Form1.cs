@@ -68,10 +68,10 @@ namespace JogoDasPalavras
                 Color cor;
                 switch (palavra[i])
                 {
-                    case '!':
+                    case 'T':
                         cor = Color.Green;
                         break;
-                    case '@':
+                    case 'C':
                         cor = Color.Yellow;
                         break;
                     default:
