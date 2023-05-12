@@ -63,7 +63,7 @@
             button21 = new Button();
             button22 = new Button();
             button23 = new Button();
-            button19 = new Button();
+            btnEnter = new Button();
             button20 = new Button();
             button15 = new Button();
             button16 = new Button();
@@ -469,7 +469,7 @@
             panBotoes.Controls.Add(button21);
             panBotoes.Controls.Add(button22);
             panBotoes.Controls.Add(button23);
-            panBotoes.Controls.Add(button19);
+            panBotoes.Controls.Add(btnEnter);
             panBotoes.Controls.Add(button20);
             panBotoes.Controls.Add(button15);
             panBotoes.Controls.Add(button16);
@@ -573,15 +573,15 @@
             button23.Text = "E";
             button23.UseVisualStyleBackColor = false;
             // 
-            // button19
+            // btnEnter
             // 
-            button19.BackColor = SystemColors.ButtonHighlight;
-            button19.Location = new Point(468, 91);
-            button19.Name = "button19";
-            button19.Size = new Size(80, 32);
-            button19.TabIndex = 18;
-            button19.Text = "Enter";
-            button19.UseVisualStyleBackColor = false;
+            btnEnter.BackColor = SystemColors.ButtonHighlight;
+            btnEnter.Location = new Point(468, 91);
+            btnEnter.Name = "btnEnter";
+            btnEnter.Size = new Size(80, 32);
+            btnEnter.TabIndex = 18;
+            btnEnter.Text = "Enter";
+            btnEnter.UseVisualStyleBackColor = false;
             // 
             // button20
             // 
@@ -849,7 +849,7 @@
         private Button button21;
         private Button button22;
         private Button button23;
-        private Button button19;
+        private Button btnEnter;
         private Button button20;
         private Button button15;
         private Button button16;

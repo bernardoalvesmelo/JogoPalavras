@@ -48,7 +48,7 @@
                 }
                 else
                 {
-                    letrasDescobertas[i] = '_';
+                    letrasDescobertas[i] = palavra[i];
                 }
             }
             tentativas--;

@@ -5,6 +5,7 @@ namespace JogoDasPalavras
         private JogoPalavras jogoPalavras;
         private int palavraCount;
         private int letraCount;
+        private Button[] botoesDigitados;
 
         public TelaJogoPalavrasForm()
         {
@@ -31,9 +32,10 @@ namespace JogoDasPalavras
                 EnviarPalpite();
                 return;
             }
-            letraCount = letraCount < 5 ? letraCount : 4;
-            panPalavras.Controls[24 - (palavraCount + letraCount)].Text = botao.Text;
-            letraCount++;
+            Label letra = (Label)panPalavras.Controls[24 - (palavraCount + letraCount)];
+            letraCount = letraCount < 5 ? ++letraCount : 5;
+            botoesDigitados[letraCount - 1] = botao;
+            letra.Text = botao.Text;
         }
 
         public void EnviarPalpite()
@@ -45,10 +47,14 @@ namespace JogoDasPalavras
             string palpite = "";
             for (int i = 0; i < 5; i++)
             {
-                palpite += panPalavras.Controls[24 - (palavraCount + i)].Text;
+                Label letra = (Label)panPalavras.Controls[24 - (palavraCount + i)];
+                palpite += letra.Text;
             }
             string palavra = jogoPalavras.VerificacaoPalavra(palpite);
             MostrarFeedback(palavra);
+            palavraCount += 5;
+            letraCount = 0;
+            botoesDigitados = new Button[5];
             string resultado = jogoPalavras.ObterResultado();
             if (resultado != "")
             {
@@ -72,20 +78,27 @@ namespace JogoDasPalavras
                         cor = Color.Yellow;
                         break;
                     default:
-                        cor = this.BackColor;
+                        cor = Color.White;
+                        botoesDigitados[i].Enabled = false;
+                        botoesDigitados[i].BackColor = this.BackColor;
                         break;
                 }
-                panPalavras.Controls[24 - (palavraCount + i)].BackColor = cor;
+                Label letra = (Label)panPalavras.Controls[24 - (palavraCount + i)];
+                letra.BackColor = cor;
             }
-            palavraCount += 5;
-            letraCount = 0;
         }
 
         public void Resetar()
         {
+            this.botoesDigitados = new Button[5];
             panBotoes.Enabled = true;
             lblResultado.Text = "Digite uma letra";
             jogoPalavras.IniciarValores();
+            foreach (Button botao in panBotoes.Controls)
+            {
+                botao.Enabled = true;
+                botao.BackColor = this.btnEnter.BackColor;
+            }
             foreach (Label letra in this.panPalavras.Controls)
             {
                 letra.Text = "";
